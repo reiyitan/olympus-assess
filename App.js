@@ -1,10 +1,27 @@
+import React from "react";
 import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import WelcomeScreen from "./screens/WelcomeScreen";
+import SignUp from "./screens/SignUp";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-slate-500">
-      <Text>SNGDGNJKNGKRJTGNRTKGNRTGNRTJKGJNKRTNGKRTNKGNRTG
-      </Text>
-    </View>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen
+                    name="WelcomeScreen"
+                    component={WelcomeScreen}
+                    options={{title: "Welcome"}}
+                />
+                <Stack.Screen
+                    name="SignUp"
+                    component={SignUp}
+                    options={{title: "Create an account"}}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
