@@ -1,6 +1,6 @@
 import React from "react"; 
 import { useState } from "react"; 
-import { View } from "react-native"; 
+import { KeyboardAvoidingView } from "react-native"; 
 import { Form, SubmitButton } from "../components";
 
 export const LoginScreen = ({navigation}) => {
@@ -11,7 +11,8 @@ export const LoginScreen = ({navigation}) => {
     }
 
     return (
-        <View
+        <KeyboardAvoidingView
+            behavior="padding"
             style={{
                 position: "absolute",
                 width: "100%",
@@ -36,6 +37,6 @@ export const LoginScreen = ({navigation}) => {
                 text="Login"
                 handlePress={handleLogin}
             />
-        </View>
+        </KeyboardAvoidingView>
     );
 }
