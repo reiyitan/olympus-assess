@@ -1,6 +1,6 @@
 import React from "react"; 
 import { View } from "react-native"; 
-import { TouchButton } from "../components";
+import { SubmitButton } from "../components";
 
 export const WelcomeScreen = ({navigation}) => {
     const handleLogin = () => {
@@ -19,11 +19,11 @@ export const WelcomeScreen = ({navigation}) => {
                 width: "100%"
             }}
         >
-            <TouchButton 
+            <SubmitButton 
                 text="Login"
                 handlePress={handleLogin}
             />
-            <TouchButton
+            <SubmitButton
                 text="Sign up"
                 handlePress={handleSignUp}
             />

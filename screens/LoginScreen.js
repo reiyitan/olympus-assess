@@ -1,7 +1,7 @@
 import React from "react"; 
 import { useState } from "react"; 
 import { View } from "react-native"; 
-import { Form, TouchButton } from "../components";
+import { Form, SubmitButton } from "../components";
 
 export const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState(""); 
@@ -32,7 +32,7 @@ export const LoginScreen = ({navigation}) => {
                 secure={true}
                 placeholder="Password"
             />
-            <TouchButton 
+            <SubmitButton
                 text="Login"
                 handlePress={handleLogin}
             />
