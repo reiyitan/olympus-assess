@@ -9,6 +9,7 @@ module.exports = {
             border: "#8D8D9C",
             gold: "#E6C466",
             white: "#ECEFF4",
+            red: "#FF6565"
         }
     },
   },
