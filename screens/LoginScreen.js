@@ -3,6 +3,11 @@ import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native"; 
 import { Form, SubmitButton } from "../components";
 
+/**
+ * Allows user to enter login information. 
+ * 
+ * @param navigation - Provides screen with Stack Navigator functions. 
+ */
 export const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState(""); 
     const [pass, setPass] = useState(""); 

@@ -2,6 +2,11 @@ import React from "react";
 import { View } from "react-native"; 
 import { SubmitButton } from "../components";
 
+/**
+ * Displays Login and Sign up buttons. 
+ * 
+ * @param navigation - Provides screen with Stack Navigator functions.
+ */
 export const WelcomeScreen = ({navigation}) => {
     const handleLogin = () => {
         navigation.navigate("LoginScreen");

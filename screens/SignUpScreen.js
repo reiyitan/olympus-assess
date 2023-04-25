@@ -3,6 +3,11 @@ import { useState, useEffect } from "react";
 import { KeyboardAvoidingView } from "react-native";
 import { Form, SubmitButton, Warning } from "../components";
 
+/**
+ * Provides user with input fields to create an account. 
+ * 
+ * @param navigation - Provides screen with Stack Navigator functions.
+ */
 export const SignUpScreen = ({navigation}) => {
     //user input
     const [fname, setFname] = useState("");

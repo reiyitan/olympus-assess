@@ -7,6 +7,9 @@ import { SignUpScreen } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
+/**
+ * Root component of the app.
+ */
 export default function App() {
     return (
         <NavigationContainer>
