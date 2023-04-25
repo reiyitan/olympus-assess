@@ -8,7 +8,8 @@ export const TouchButton = ({text, handlePress}) => {
             onPress={handlePress}
             style={{
                 alignContent: "center",
-                width: "90%"
+                width: "95%",
+                backgroundColor: "#E6C466"
             }}
         >
             <Text
