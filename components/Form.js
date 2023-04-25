@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput } from "react-native";
 
-const Form = ({text, setText, placeholder}) => {
+export const Form = ({text, setText, placeholder}) => {
 
     return (
         <TextInput 
@@ -14,5 +14,3 @@ const Form = ({text, setText, placeholder}) => {
         />
     );
 }
-
-export default Form;

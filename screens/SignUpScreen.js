@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { View } from "react-native";
-import Form from "../components/Form";
+import { Form } from "../components";
 
-const SignUp = ({navigation}) => {
+export const SignUpScreen = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState(""); 
     const [confirmPass, setConfirmPass] = useState(""); 
@@ -28,5 +28,3 @@ const SignUp = ({navigation}) => {
         </View>
     );
 }
-
-export default SignUp;

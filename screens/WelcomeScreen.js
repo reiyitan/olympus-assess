@@ -1,10 +1,10 @@
 import React from "react"; 
 import { View } from "react-native"; 
-import TouchButton from "../components/TouchButton";
+import { TouchButton } from "../components";
 
-const WelcomeScreen = ({navigation}) => {
+export const WelcomeScreen = ({navigation}) => {
     const handleLogin = () => {
-
+        navigation.navigate("LoginScreen");
     }
 
     const handleSignUp = () => {
@@ -30,5 +30,3 @@ const WelcomeScreen = ({navigation}) => {
         </View>
     );
 }
-
-export default WelcomeScreen;   

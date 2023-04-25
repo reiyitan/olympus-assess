@@ -1,7 +1,7 @@
 import React from "react"; 
 import { Text, TouchableOpacity } from "react-native"; 
 
-const TouchButton = ({text, handlePress}) => {
+export const TouchButton = ({text, handlePress}) => {
     return (
         <TouchableOpacity 
             className="bg-white rounded-full mt-5 mx-5 h-16"
@@ -25,5 +25,3 @@ const TouchButton = ({text, handlePress}) => {
         </TouchableOpacity>
     ); 
 }
-
-export default TouchButton; 
