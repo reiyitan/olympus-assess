@@ -1,16 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { KeyboardAvoidingView } from "react-native";
-import { Form, SubmitButton } from "../components";
+import { Form, SubmitButton, Warning } from "../components";
 
 export const SignUpScreen = ({navigation}) => {
+    //user input
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState(""); 
     const [confirmPass, setConfirmPass] = useState("");
+
+    //functionality
+    const [warning, setWarning] = useState(""); 
     const handleSignUp = () => {
+        if (pass !== confirmPass) {
+            return;
+        }
+        const arr = [fname, lname, email, pass, confirmPass]; 
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "") {
+                setWarning("You must fill out all fields");
+            }
+        }
     }
+    useEffect(() => {
+        if (pass !== confirmPass) setWarning("Passwords do not match");
+        else setWarning("");
+    }, [pass, confirmPass]);
 
     return (
         <KeyboardAvoidingView 
@@ -54,6 +71,7 @@ export const SignUpScreen = ({navigation}) => {
                 secure={true}
                 placeholder="Confirm your password"
             />
+            <Warning warning={warning}/>
             <SubmitButton 
                 text="Sign up"
                 handlePress={handleSignUp}
