@@ -17,7 +17,8 @@ export default function App() {
                     },
                     headerStyle: {
                         backgroundColor: "#E6C466"
-                    }
+                    },
+                    headerTintColor: "black",
                 }}
             >
                 <Stack.Screen
@@ -28,7 +29,7 @@ export default function App() {
                 <Stack.Screen
                     name="LoginScreen"
                     component={LoginScreen}
-                    options={{title: "Create an account"}}
+                    options={{title: "Login"}}
                 />
                 <Stack.Screen
                     name="SignUpScreen"
