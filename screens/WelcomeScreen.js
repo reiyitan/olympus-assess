@@ -8,7 +8,7 @@ export const WelcomeScreen = ({navigation}) => {
     }
 
     const handleSignUp = () => {
-
+        navigation.navigate("SignUpScreen");
     }
 
     return (
