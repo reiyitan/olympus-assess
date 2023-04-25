@@ -1,6 +1,12 @@
 import React from "react"; 
 import { Text, TouchableOpacity } from "react-native"; 
 
+/**
+ * A custom button component.
+ * 
+ * @param text - The text to be displayed on the button .
+ * @param handlePress - Callback function that is called on button press.
+ */
 export const TouchButton = ({text, handlePress}) => {
     return (
         <TouchableOpacity 
