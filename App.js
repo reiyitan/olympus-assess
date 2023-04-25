@@ -1,5 +1,4 @@
 import React from "react";
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from "./screens/WelcomeScreen";
@@ -10,7 +9,16 @@ const Stack = createNativeStackNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator
+                screenOptions={{
+                    contentStyle: {
+                        backgroundColor: "#19191C",
+                    },
+                    headerStyle: {
+                        backgroundColor: "#E6C466"
+                    }
+                }}
+            >
                 <Stack.Screen
                     name="WelcomeScreen"
                     component={WelcomeScreen}
