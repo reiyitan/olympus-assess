@@ -49,31 +49,31 @@ export const SignUpScreen = ({navigation}) => {
                 text={fname}
                 setText={setFname}
                 secure={false}
-                placeholder="First name"
+                label="First name"
             />
             <Form
                 text={lname}
                 setText={setLname}
                 secure={false}
-                placeholder="Last name"
+                label="Last name"
             />
             <Form
                 text={email}
                 setText={setEmail}
                 secure={false}
-                placeholder="Email"
+                label="Email"
             />
             <Form
                 text={pass}
                 setText={setPass}
                 secure={true}
-                placeholder="Password"
+                label="Password"
             />
             <Form
                 text={confirmPass}
                 setText={setConfirmPass}
                 secure={true}
-                placeholder="Confirm your password"
+                label="Confirm your password"
             />
             <Warning warning={warning}/>
             <SubmitButton 

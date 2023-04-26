@@ -7,9 +7,9 @@ import { Text, TextInput } from "react-native";
  * @param text - A state variable. Replaces the value of the TextInput. 
  * @param setText - Updates state of text when a user types in the TextInput. 
  * @param secure - True if text should be hidden, false otherwise. 
- * @param placeholder - Placeholder text for the form. 
+ * @param label - Label for the form. Appears as text above the input.
  */
-export const Form = ({text, setText, secure, placeholder}) => {
+export const Form = ({text, setText, secure, label}) => {
     return (
         <>
             <Text
@@ -20,7 +20,7 @@ export const Form = ({text, setText, secure, placeholder}) => {
                     marginRight: "auto"
                 }}
             >
-                {placeholder}
+                {label}
             </Text>
             <TextInput 
                 className="h-8 border-border border-b-2 mt-1 mb-5 color-gold"

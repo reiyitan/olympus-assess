@@ -29,13 +29,13 @@ export const LoginScreen = ({navigation}) => {
                 text={email}
                 setText={setEmail}
                 secure={false}
-                placeholder="Email"
+                label="Email"
             />
             <Form 
                 text={pass}
                 setText={setPass}
                 secure={true}
-                placeholder="Password"
+                label="Password"
             />
             <SubmitButton
                 text="Login"

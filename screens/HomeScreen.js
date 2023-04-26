@@ -1,13 +1,35 @@
 import React from "react";
 import { useEffect } from "react";
 import { View, Text } from "react-native"; 
+import { Exercise } from "../components";
 
-export const HomeScreen = ({route, navigation}) => {
-    const { email } = route.params;
+/**
+ * Provides user a section to enter information for 3 sets
+ * of an exercise. 
+ * 
+ * @param route - route.params provides parameters passed through the stack navigator.
+ */
+export const HomeScreen = ({route}) => {
+    const { email } = route.params; //TODO replace with name
 
     return (
-        <View>
-            <Text>Hi, {email}</Text>
+        <View
+            style={{
+                top: "7.5%",
+                width: "90%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                flex: 1
+            }}
+        >
+            <Text
+                style={{
+                    color: "white",
+                    fontSize: 20
+                }}
+            >
+                Hi, {email}
+            </Text>
         </View>
     );
 }
