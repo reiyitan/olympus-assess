@@ -23,6 +23,7 @@ export const HomeScreen = ({route}) => {
             }}
         >
             <Text
+                className="mb-5"
                 style={{
                     color: "white",
                     fontSize: 20
@@ -30,6 +31,7 @@ export const HomeScreen = ({route}) => {
             >
                 Hi, {email}
             </Text>
+            <Exercise />
         </View>
     );
 }
