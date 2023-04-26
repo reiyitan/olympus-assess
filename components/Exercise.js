@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Form, Header } from ".";
+import { Form } from "../common";
+import { Header } from "../utils";
 
 export const Exercise = () => {
     const [exerciseName, setExerciseName] = useState("");
