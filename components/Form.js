@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput } from "react-native";
+import { Text, TextInput } from "react-native";
 
 /**
  * Component for getting user input. 
@@ -11,20 +11,31 @@ import { TextInput } from "react-native";
  */
 export const Form = ({text, setText, secure, placeholder}) => {
     return (
-        <TextInput 
-            className="h-16 bg-input border-border mt-5 rounded-full color-gold"
-            secureTextEntry={secure}
-            value={text}
-            placeholder={placeholder}
-            placeholderTextColor="#4C566A"
-            onChangeText={setText}
-            textAlign="left"
-            style={{
-                paddingLeft: 30,
-                width: "95%",
-                marginLeft: "auto",
-                marginRight: "auto"
-            }}
-        />
+        <>
+            <Text
+                className="color-border"
+                style={{
+                    width: "85%",
+                    marginLeft: "auto",
+                    marginRight: "auto"
+                }}
+            >
+                {placeholder}
+            </Text>
+            <TextInput 
+                className="h-8 border-border border-b-2 mt-1 mb-5 color-gold"
+                secureTextEntry={secure}
+                value={text}
+                placeholderTextColor="#4C566A"
+                onChangeText={setText}
+                textAlign="left"
+                style={{
+                    width: "85%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    paddingLeft: 5
+                }}
+            />
+        </>
     );
 }
