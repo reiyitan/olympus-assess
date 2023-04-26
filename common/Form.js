@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextInput } from "react-native";
+import { View, Text, TextInput } from "react-native";
 
 /**
  * Component for getting user input. 
@@ -9,35 +9,60 @@ import { Text, TextInput } from "react-native";
  * @param secure - True if text should be hidden, false otherwise. 
  * @param label - Label for the form. Appears as text above the input.
  * @param width - The desired Form width.
+ * @param bgColor - Hex code specifying the background color for the TextInput.
+ * @param inputType - Specifies input type for the TextInput. 
  */
-export const Form = ({text, setText, secure, label, width}) => {
+export const Form = ({
+    text, 
+    setText, 
+    secure, 
+    label, 
+    width, 
+    bgColor,
+    inputType
+}) => {
     return (
-        <>
-            {
-                label && <Text
-                    className="color-border"
-                    style={{
-                        width: width,
-                        marginLeft: "auto",
-                        marginRight: "auto"
-                    }}
-                >
-                    {label}
-                </Text>
-            }  
-            <TextInput 
-                className="h-8 border-border border-b-2 mt-1 mb-5 color-gold"
-                secureTextEntry={secure}
-                value={text}
-                onChangeText={setText}
-                textAlign="left"
+        <View
+            className="mb-5 mt-1"
+            style={{
+                width: width,
+                marginLeft: "auto",
+                marginRight: "auto",
+                paddingLeft: 5,
+                paddingRight: 5
+            }}
+        >
+            {label && <Text
+                className="color-border mb-1"
                 style={{
-                    width: width,
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    paddingLeft: 7.5
+                    width: "100%",
+                    textAlign: "left",
+                    paddingLeft: 0
                 }}
-            />
-        </>
+            >
+                {label}
+            </Text>}
+            <View
+                style={{
+                    backgroundColor: bgColor ? bgColor : null,
+                    padding: bgColor ? 5 : 0,
+                    borderRadius: 5
+                }}
+            >
+                <TextInput 
+                    className="h-6 border-border color-gold"
+                    secureTextEntry={secure ? secure : false}
+                    value={text}
+                    onChangeText={setText}
+                    textAlign="left"
+                    style={{
+                        width: "100%",
+                        paddingLeft: 5,
+                        borderBottomWidth: 1
+                    }}
+                    keyboardType={inputType ? inputType : "default"}
+                />
+            </View>  
+        </View>
     );
 }
