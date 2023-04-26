@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { View, Text } from "react-native"; 
 import { Exercise } from "../components";
 

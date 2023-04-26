@@ -1,7 +1,8 @@
 import React from "react"; 
 import { useState } from "react"; 
 import { KeyboardAvoidingView } from "react-native"; 
-import { Form, SubmitButton } from "../components";
+import { Form } from "../common";
+import { SubmitButton } from "../components";
 
 /**
  * Allows user to enter login information. 
