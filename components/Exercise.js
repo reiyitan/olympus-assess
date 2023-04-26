@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Form } from "../common";
 import { Header } from "../utils";
+import { ExerciseRow } from "../utils";
 
 export const Exercise = () => {
     const [exerciseName, setExerciseName] = useState("");
@@ -11,11 +12,11 @@ export const Exercise = () => {
             <Form 
                 text={exerciseName}
                 setText={setExerciseName} 
-                secure={false}
                 label="Exercise name"
                 width="85%"
             />
             <Header />
+            <ExerciseRow />
         </>
     );
 }
