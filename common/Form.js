@@ -26,7 +26,6 @@ export const Form = ({text, setText, secure, label}) => {
                 className="h-8 border-border border-b-2 mt-1 mb-5 color-gold"
                 secureTextEntry={secure}
                 value={text}
-                placeholderTextColor="#4C566A"
                 onChangeText={setText}
                 textAlign="left"
                 style={{
