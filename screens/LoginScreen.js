@@ -31,12 +31,14 @@ export const LoginScreen = ({navigation}) => {
                 setText={setEmail}
                 secure={false}
                 label="Email"
+                width="85%"
             />
             <Form 
                 text={pass}
                 setText={setPass}
                 secure={true}
                 label="Password"
+                width="85%"
             />
             <SubmitButton
                 text="Login"

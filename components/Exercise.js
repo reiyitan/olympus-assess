@@ -13,6 +13,7 @@ export const Exercise = () => {
                 setText={setExerciseName} 
                 secure={false}
                 label="Exercise name"
+                width="85%"
             />
             <Header />
         </>

@@ -51,30 +51,35 @@ export const SignUpScreen = ({navigation}) => {
                 setText={setFname}
                 secure={false}
                 label="First name"
+                width="85%"
             />
             <Form
                 text={lname}
                 setText={setLname}
                 secure={false}
                 label="Last name"
+                width="85%"
             />
             <Form
                 text={email}
                 setText={setEmail}
                 secure={false}
                 label="Email"
+                width="85%"
             />
             <Form
                 text={pass}
                 setText={setPass}
                 secure={true}
                 label="Password"
+                width="85%"
             />
             <Form
                 text={confirmPass}
                 setText={setConfirmPass}
                 secure={true}
                 label="Confirm your password"
+                width="85%"
             />
             <Warning warning={warning}/>
             <SubmitButton 

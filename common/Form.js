@@ -8,14 +8,15 @@ import { Text, TextInput } from "react-native";
  * @param setText - Updates state of text when a user types in the TextInput. 
  * @param secure - True if text should be hidden, false otherwise. 
  * @param label - Label for the form. Appears as text above the input.
+ * @param width - The desired Form width.
  */
-export const Form = ({text, setText, secure, label}) => {
+export const Form = ({text, setText, secure, label, width}) => {
     return (
         <>
             <Text
                 className="color-border"
                 style={{
-                    width: "85%",
+                    width: width,
                     marginLeft: "auto",
                     marginRight: "auto"
                 }}
@@ -29,7 +30,7 @@ export const Form = ({text, setText, secure, label}) => {
                 onChangeText={setText}
                 textAlign="left"
                 style={{
-                    width: "85%",
+                    width: width,
                     marginLeft: "auto",
                     marginRight: "auto",
                     paddingLeft: 7.5
