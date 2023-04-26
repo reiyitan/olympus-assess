@@ -13,16 +13,18 @@ import { Text, TextInput } from "react-native";
 export const Form = ({text, setText, secure, label, width}) => {
     return (
         <>
-            <Text
-                className="color-border"
-                style={{
-                    width: width,
-                    marginLeft: "auto",
-                    marginRight: "auto"
-                }}
-            >
-                {label}
-            </Text>
+            {
+                label && <Text
+                    className="color-border"
+                    style={{
+                        width: width,
+                        marginLeft: "auto",
+                        marginRight: "auto"
+                    }}
+                >
+                    {label}
+                </Text>
+            }  
             <TextInput 
                 className="h-8 border-border border-b-2 mt-1 mb-5 color-gold"
                 secureTextEntry={secure}
