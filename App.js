@@ -1,9 +1,7 @@
 import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { WelcomeScreen } from "./screens";
-import { LoginScreen } from "./screens";
-import { SignUpScreen } from "./screens";
+import { WelcomeScreen, LoginScreen, SignUpScreen, HomeScreen } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,22 +20,38 @@ export default function App() {
                         backgroundColor: "#E6C466"
                     },
                     headerTintColor: "black",
+                    headerShown: true,
+                    gestureEnabled: false
                 }}
             >
                 <Stack.Screen
                     name="WelcomeScreen"
                     component={WelcomeScreen}
-                    options={{title: "Welcome"}}
+                    options={{
+                        title: "Welcome"
+                    }}
                 />
                 <Stack.Screen
                     name="LoginScreen"
                     component={LoginScreen}
-                    options={{title: "Login"}}
+                    options={{
+                        title: "Login",
+                        headerBackVisible: true
+                    }}
                 />
                 <Stack.Screen
                     name="SignUpScreen"
                     component={SignUpScreen}
-                    options={{title: "Create an account"}}
+                    options={{
+                        title: "Create an account"
+                    }}
+                />
+                <Stack.Screen
+                    name="HomeScreen"
+                    component={HomeScreen}
+                    options={{
+                        headerShown: false
+                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
