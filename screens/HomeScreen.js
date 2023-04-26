@@ -22,10 +22,11 @@ export const HomeScreen = ({route}) => {
             }}
         >
             <Text
-                className="mb-5"
+                className="mb-5 ml-5"
                 style={{
                     color: "white",
-                    fontSize: 20
+                    fontSize: 20,
+                    fontWeight: "bold"
                 }}
             >
                 Hi, {email}
