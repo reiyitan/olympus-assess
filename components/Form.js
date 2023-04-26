@@ -33,7 +33,7 @@ export const Form = ({text, setText, secure, label}) => {
                     width: "85%",
                     marginLeft: "auto",
                     marginRight: "auto",
-                    paddingLeft: 5
+                    paddingLeft: 7.5
                 }}
             />
         </>
