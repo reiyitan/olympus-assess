@@ -5,10 +5,9 @@ module.exports = {
     extend: {
         colors: {
             background: "#19191C",
-            input: "#232329",
             border: "#8D8D9C",
             gold: "#E6C466",
-            red: "#FF6565"
+            red: "#FF6565",
         }
     },
   },
