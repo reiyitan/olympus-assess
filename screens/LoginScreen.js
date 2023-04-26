@@ -12,7 +12,7 @@ export const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState(""); 
     const [pass, setPass] = useState(""); 
     const handleLogin = () => {
-        //navigate to home screen
+        navigation.navigate("HomeScreen", {email});
     }
 
     return (
