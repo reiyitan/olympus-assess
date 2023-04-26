@@ -10,9 +10,13 @@ export const Warning = ({warning}) => {
     if (warning==="") return null;
     return (
         <Text
-            className="mt-5"
+            className="mt-0"
             style={{
-                color: "#FF6565"
+                color: "#FF6565",
+                width: "85%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                textAlign: "center"
             }}
         >
             {warning}
