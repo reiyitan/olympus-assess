@@ -22,7 +22,6 @@ export const LoginScreen = ({navigation}) => {
                 position: "absolute",
                 width: "100%",
                 height: "100%",
-                alignItems: "center",
                 justifyContent: "center"
             }}
         >
