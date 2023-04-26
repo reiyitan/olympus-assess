@@ -11,6 +11,7 @@ import { View, Text, TextInput } from "react-native";
  * @param width - The desired Form width.
  * @param bgColor - Hex code specifying the background color for the TextInput.
  * @param inputType - Specifies input type for the TextInput. 
+ * @param center - True if TextInput text should be centered.
  */
 export const Form = ({
     text, 
@@ -19,7 +20,8 @@ export const Form = ({
     label, 
     width, 
     bgColor,
-    inputType
+    inputType,
+    center
 }) => {
     return (
         <View
@@ -58,7 +60,9 @@ export const Form = ({
                     style={{
                         width: "100%",
                         paddingLeft: 5,
-                        borderBottomWidth: 1
+                        paddingRight: 5,
+                        borderBottomWidth: 1,
+                        textAlign: center ? center : "left"
                     }}
                     keyboardType={inputType ? inputType : "default"}
                 />
