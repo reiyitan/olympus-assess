@@ -15,6 +15,8 @@ export const SubmitButton = ({text, handlePress}) => {
             style={{
                 alignContent: "center",
                 width: "95%",
+                marginLeft: "auto",
+                marginRight: "auto",
                 backgroundColor: "#E6C466"
             }}
         >

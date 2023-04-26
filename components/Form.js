@@ -21,7 +21,9 @@ export const Form = ({text, setText, secure, placeholder}) => {
             textAlign="left"
             style={{
                 paddingLeft: 30,
-                width: "95%"
+                width: "95%",
+                marginLeft: "auto",
+                marginRight: "auto"
             }}
         />
     );
