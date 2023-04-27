@@ -17,6 +17,8 @@ export const Exercise = () => {
             />
             <Header />
             <ExerciseRow />
+            <ExerciseRow />
+            <ExerciseRow />
         </>
     );
 }
