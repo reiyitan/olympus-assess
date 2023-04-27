@@ -62,7 +62,7 @@ export const Form = ({
                         paddingLeft: 5,
                         paddingRight: 5,
                         borderBottomWidth: 1,
-                        textAlign: center ? center : "left"
+                        textAlign: center ? "center" : "left"
                     }}
                     keyboardType={inputType ? inputType : "default"}
                 />
