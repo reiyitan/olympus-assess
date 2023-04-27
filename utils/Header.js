@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
 export const Header = () => {
     return (
         <View
+            className="mb-1"
             style={{
                 width: "80%",
                 marginLeft: "auto", 

@@ -25,7 +25,7 @@ export const Form = ({
 }) => {
     return (
         <View
-            className="mb-5 mt-1"
+            className="mb-2 mt-1"
             style={{
                 width: width,
                 marginLeft: "auto",
