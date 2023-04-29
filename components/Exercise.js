@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { Form } from "../common";
-import { Header } from "../utils";
-import { ExerciseRow } from "../utils";
+import { Form } from "./Form";
+import { Header } from "./Header";
+import { ExerciseRow } from "./ExerciseRow";
 
 export const Exercise = () => {
     const [exerciseName, setExerciseName] = useState("");
