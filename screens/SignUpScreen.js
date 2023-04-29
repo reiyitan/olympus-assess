@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { KeyboardAvoidingView } from "react-native";
-import { SubmitButton, Warning } from "../components";
-import { Form } from "../common";
+import { Form, SubmitButton, Warning } from "../components";
 
 /**
  * Provides user with input fields to create an account. 
