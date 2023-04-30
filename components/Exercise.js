@@ -4,6 +4,12 @@ import { Form } from "./Form";
 import { Header } from "./Header";
 import { ExerciseRow } from "./ExerciseRow";
 
+const numRows = 3; 
+const zIndices = Array.from({length: numRows}, (_, i) => numRows - i);
+
+/**
+ * Presents numRows rows for weight, reps, RPE, and tag.
+ */
 export const Exercise = () => {
     const [exerciseName, setExerciseName] = useState("");
 
@@ -16,9 +22,12 @@ export const Exercise = () => {
                 width="85%"
             />
             <Header />
-            <ExerciseRow />
-            <ExerciseRow />
-            <ExerciseRow />
+            {zIndices.map((zIndex) => (
+                <ExerciseRow 
+                    key={zIndex} 
+                    zIndex={zIndex} 
+                />
+            ))}
         </>
     );
 }

@@ -4,10 +4,16 @@ import { Form } from "./Form";
 import { Dropdown } from "./Dropdown";
 import { View } from "react-native"; 
 
-export const ExerciseRow = () => {
+/**
+ * Renders Weight, Reps, RPE, and Tag input fields. 
+ * 
+ * @param zIndex - The zIndex of the row.
+ */
+export const ExerciseRow = ({zIndex}) => {
     const [weight, setWeight] = useState("");
     const [reps, setReps] = useState("");
     const [RPE, setRPE] = useState("");
+
     return (
         <View
             style={{
@@ -15,7 +21,8 @@ export const ExerciseRow = () => {
                 flexDirection: "row",
                 marginLeft: "auto",
                 marginRight: "auto",
-                width: "80%"
+                width: "80%",
+                zIndex: zIndex
             }}
         >
             <Form 
