@@ -1,6 +1,7 @@
 import React from "react"; 
 import { useState } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
+import { ChevronLeftIcon, ChevronDownIcon } from "react-native-heroicons/mini";
 
 const tags = [
     {name: "Warmup", color: "#FF6565"},
@@ -75,14 +76,14 @@ export const Dropdown = ({width}) => {
                     paddingRight: 5
                 }}
             >
-                <View //gray background
+                <View //outer container - background color
                     style={{
                         backgroundColor: "#232329",
                         padding: 5,
                         borderRadius: 5
                     }}
                 >
-                    <View //underline text
+                    <View //inner container - underline
                         style={{
                             borderBottomWidth: 1,
                             borderColor: "#8D8D9C",
@@ -101,6 +102,26 @@ export const Dropdown = ({width}) => {
                         >
                             {tag}
                         </Text>
+                        {expanded 
+                            ? <ChevronDownIcon 
+                                size={15}
+                                style={{
+                                    position: "absolute",
+                                    left: "85%",
+                                    top: 5,
+                                    color: "#8D8D9C"
+                                }}
+                            />
+                            : <ChevronLeftIcon 
+                                size={15}
+                                style={{
+                                    position: "absolute", 
+                                    left: "85%",
+                                    top: 5,
+                                    color: "#8D8D9C"
+                                }}
+                            />
+                        }
                     </View>
                     {expanded && <View //selection container
                         style={{
