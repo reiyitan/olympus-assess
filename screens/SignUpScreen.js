@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { KeyboardAvoidingView } from "react-native";
 import { Form, SubmitButton, Warning } from "../components";
 import { database } from "../database";
-import { hash } from "react-native-bcrypt";
-import sqlstring from "sqlstring";
+import { hash } from "../functions";
 
 /**
  * Provides user with input fields to create an account. 
@@ -32,12 +31,7 @@ export const SignUpScreen = ({navigation}) => {
                 return;
             }
         }
-        const escFname = sqlstring.escape(fname); 
-        const escLname = sqlstring.escape(lname);
-        const escEmail = sqlstring.escape(email);
-        console.log(escEmail);
-        database.insertUser(fname, lname, email, pass, setWarning);
-
+        database.insertUser(fname, lname, email, hash(pass), setWarning, navigation);
     }
     useEffect(() => {
         if (pass !== confirmPass) setWarning("Passwords do not match");

@@ -9,7 +9,7 @@ import { Exercise } from "../components";
  * @param route - route.params provides parameters passed through the stack navigator.
  */
 export const HomeScreen = ({route}) => {
-    const { email } = route.params; //TODO replace with name
+    const { name } = route.params;
 
     return (
         <View
@@ -29,7 +29,7 @@ export const HomeScreen = ({route}) => {
                     fontWeight: "bold"
                 }}
             >
-                Hi, {email}
+                Hi, {name}
             </Text>
             <Exercise />
         </View>

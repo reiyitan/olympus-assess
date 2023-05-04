@@ -1,7 +1,9 @@
 import React from "react"; 
 import { useState } from "react"; 
 import { KeyboardAvoidingView } from "react-native"; 
-import { Form, SubmitButton } from "../components";
+import { Form, SubmitButton, Warning } from "../components";
+import { database } from "../database";
+import { hash } from "../functions";
 
 /**
  * Allows user to enter login information. 
@@ -11,8 +13,13 @@ import { Form, SubmitButton } from "../components";
 export const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState(""); 
     const [pass, setPass] = useState(""); 
+    const [warning, setWarning] = useState("");
     const handleLogin = () => {
-        navigation.navigate("HomeScreen", {email});
+        if (email === "" || pass === "") {
+            setWarning("You must fill out all fields");
+            return;
+        }
+        database.loginUser(email, hash(pass), setWarning, navigation);
     }
 
     return (
@@ -38,6 +45,9 @@ export const LoginScreen = ({navigation}) => {
                 secure={true}
                 label="Password"
                 width="85%"
+            />
+            <Warning 
+                warning={warning}
             />
             <SubmitButton
                 text="Login"
