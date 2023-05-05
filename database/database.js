@@ -1,5 +1,4 @@
 import * as SQLite from "expo-sqlite";
-import sqlstring from "sqlstring";
 
 //********** HANDLE REGISTRATION **********
 /**
@@ -50,7 +49,7 @@ const handleGetPassSuccess = (result, fname, pass, setWarning, navigation) => {
             setWarning("Incorrect password");
         }
     }).catch(() => {
-        setWarning("That email is not registered");
+        setWarning("No account found with that email");
     });
 }
 
