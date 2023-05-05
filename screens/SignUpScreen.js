@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { KeyboardAvoidingView } from "react-native";
 import { Form, SubmitButton, Warning } from "../components";
 import { database } from "../database";
@@ -22,6 +22,7 @@ export const SignUpScreen = ({navigation}) => {
     const [warning, setWarning] = useState(""); 
     const handleSignUp = () => {
         if (pass !== confirmPass) {
+            setWarning("Passwords do not match");
             return;
         }
         const arr = [fname, lname, email, pass, confirmPass]; 
@@ -33,10 +34,6 @@ export const SignUpScreen = ({navigation}) => {
         }
         database.insertUser(fname, lname, email, hash(pass), setWarning, navigation);
     }
-    useEffect(() => {
-        if (pass !== confirmPass) setWarning("Passwords do not match");
-        else setWarning("");
-    }, [pass, confirmPass]);
 
     return (
         <KeyboardAvoidingView 
